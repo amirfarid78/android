@@ -1,0 +1,219 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.coheser.app.viewModels.NotificationViewModel" />
+    </data>
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/d_bottom_gray_line">
+
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/notifications"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:id="@+id/storyViewStart"
+            android:layout_below="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp">
+
+
+            <LinearLayout
+                android:layout_alignParentStart="true"
+                android:id="@+id/tabCreateStory"
+                android:layout_centerVertical="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp">
+
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/ivUserPic"
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_centerInParent="true"
+                        app:actualImageScaleType="centerCrop"
+                        app:failureImageScaleType="centerCrop"
+                        app:placeholderImage="@drawable/ic_user_icon"
+                        app:placeholderImageScaleType="centerCrop"
+                        app:roundAsCircle="true" />
+
+
+                    <ImageView
+                        android:layout_width="@dimen/_18sdp"
+                        android:layout_height="@dimen/_18sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/ic_profile_circle_bg"
+                        android:backgroundTint="@color/blueColor"
+                        android:padding="@dimen/_2sdp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_add_round"
+                        app:tint="@color/whiteColor" />
+
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="normal"
+                    android:gravity="center"
+                    android:minLines="2"
+                    android:paddingHorizontal="@dimen/_2sdp"
+                    />
+
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginStart="@dimen/_6sdp"
+                android:id="@+id/storyRecyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/tabCreateStory"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"/>
+
+
+        </RelativeLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swiperefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/storyViewStart"
+            android:layout_centerHorizontal="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true">
+
+
+                    <LinearLayout
+                        android:id="@+id/dataContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/load_more_progress"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recylerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        app:checkVisibility="@{viewModel.noDataViewVisibility}"
+                        android:id="@+id/no_data_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/white"
+                        android:paddingStart="@dimen/_12sdp"
+                        android:paddingEnd="@dimen/_12sdp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="@dimen/_22sdp"
+                            android:layout_marginEnd="@dimen/_22sdp"
+                            android:layout_centerInParent="true"
+                            android:text="@string/no_notification"
+                            android:textColor="@color/dimgray"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold"/>
+
+                    </RelativeLayout>
+
+
+                    <ProgressBar
+                        app:checkVisibility="@{viewModel.loadMoreLoaderVisibility}"
+                        android:id="@+id/load_more_progress"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:theme="@style/ProgressbarStyle" />
+
+
+                </RelativeLayout>
+
+
+                <include
+                    android:id="@+id/shimmerMainLayout"
+                    layout="@layout/shimmer_story_list_layout" />
+
+
+            </RelativeLayout>
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>
+
+</layout>

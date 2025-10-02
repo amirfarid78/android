@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/listing_title"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp"/>
+        <EditText
+            android:id="@+id/listing_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/d_round_gray_background_2"
+            android:hint="@string/name_your_listing"
+            android:textSize="15sp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dimgray"
+            android:layout_marginTop="8dp"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/list_description"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:hint="@string/include_any_other_details_helpful_to_buyers_or_share_about_the_story_behind_this_item"
+            android:gravity="start"
+            android:background="@drawable/d_round_gray_background_2"
+            android:padding="@dimen/_10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dimgray"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+
+
+</ScrollView>

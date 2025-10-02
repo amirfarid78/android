@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/login_f"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:elevation="10dp" />
+
+        <LinearLayout
+            android:id="@+id/top_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:background="@color/black"
+            android:orientation="vertical"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/d_top_left_right_radius">
+
+            <ImageView
+                android:id="@+id/goBack"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/_12sdp"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/ic_white_cross"
+                app:tint="@color/black" />
+
+
+            <!--            hide this-->
+            <TextView
+                android:id="@+id/login_title_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_48sdp"
+                android:gravity="center"
+                android:text="@string/login_in_to_app"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/buttonsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/login_title_txt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="18dp">
+
+                <LinearLayout
+                    android:id="@+id/login_details_RL3_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="@dimen/_38sdp"
+                    android:layout_marginEnd="@dimen/_38sdp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/phone_email_login_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_32sdp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/login_btn_draw_red">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:id="@+id/email_login_txt"
+                            android:drawableStart="@drawable/ic_profile_white"
+                            android:drawablePadding="10dp"
+                            android:gravity="center"
+                            android:text="@string/user_phone_email_username"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_11sdp"
+                            android:textStyle="normal" />
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/google_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_32sdp"
+                        android:layout_below="@+id/phone_email_login_btn"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:background="@drawable/login_btn_draw"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@null"
+                            android:drawableStart="@drawable/ic_goggle"
+                            android:drawablePadding="10dp"
+                            android:text="@string/continue_with_google"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp"
+                            android:textStyle="normal" />
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/errorMsgTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textColor="@color/appColor"
+                        android:textSize="@dimen/_11sdp"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/tabBottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/login_details_RL3_id"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/_42sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/already_have_an_account"
+                        android:textColor="@color/dimgray"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:id="@+id/signUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/_5sdp"
+                        android:paddingVertical="@dimen/_13sdp"
+                        android:text="@string/sign_up"
+                        android:textColor="@color/appColor"
+                        android:textSize="@dimen/_12sdp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/login_terms_condition_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tabBottom"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_130sdp"
+                    android:layout_marginBottom="30dp"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:text="@string/by_signing_up_you_confirm_that_you_agree_to_our_n_terms_of_use_and_have_read_and_understood_n_our_privacy_policy"
+                    android:textColor="@color/dimgray" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</layout>

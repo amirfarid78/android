@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:id="@+id/mainLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/appColor_15"
+        android:layout_marginTop="@dimen/_5sdp">
+        <LinearLayout
+            android:id="@+id/dataLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_15sdp"
+            android:layout_toStartOf="@id/editBtn">
+
+            <ImageView
+                android:id="@+id/locIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toEndOf="@id/locIcon"
+                android:layout_toStartOf="@id/editBtn"
+                android:gravity="center_vertical"
+                android:layout_marginEnd="9dp"
+                android:layout_marginStart="@dimen/_13sdp">
+
+                <TextView
+                    android:id="@+id/locationName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3120 Scott Boulevard, 101"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/locationAddressText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Santa clara, CA 95094"
+                    android:textColor="@color/darkgray"
+                    android:textSize="@dimen/_11sdp"
+                    android:maxLines="2"
+                    android:ellipsize="end"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:id="@+id/editBtn"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:padding="15dp"
+            android:elevation="@dimen/_10dp"
+            app:tint="@color/black"
+            android:src="@drawable/ic_edit_outline"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+</layout>

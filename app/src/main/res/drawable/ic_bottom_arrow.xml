@@ -1,0 +1,19 @@
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="5dp"
+    android:insetRight="5dp"
+    android:insetTop="5dp"
+    android:insetBottom="5dp">
+    <vector
+        android:width="12dp"
+        android:height="7dp"
+        android:viewportWidth="12"
+        android:viewportHeight="7">
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M1,1L6,6L11,1"
+            android:strokeWidth="1.5"
+            android:strokeColor="@color/darkgray"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round" />
+    </vector>
+</inset>

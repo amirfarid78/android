@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="120dp"
+        android:id="@+id/mainLayout"
+        android:layout_margin="@dimen/_3sdp"
+        android:layout_height="@dimen/_95sdp"
+        app:cardCornerRadius="@dimen/_2sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/priceTxt">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/productImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:actualImageScaleType="fitCenter"
+                app:placeholderImageScaleType="centerCrop"
+                fresco:placeholderImage="@drawable/image_placeholder" />
+
+        </RelativeLayout>
+
+            <TextView
+                android:id="@+id/priceTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$0.00"
+                android:textStyle="bold"
+                android:layout_alignParentBottom="true"
+                android:layout_marginVertical="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:textColor="@color/black" />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</layout>

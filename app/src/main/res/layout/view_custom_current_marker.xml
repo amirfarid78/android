@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/custom_marker_view"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp">
+
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_current_profile_pin" />
+
+        <FrameLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_3sdp"
+            app:srcCompat="@drawable/ic_profile_gray"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_31sdp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/img_pin_profile"
+                app:srcCompat="@drawable/ic_profile_gray"/>
+
+
+            <TextView
+                android:id="@+id/tv_pin_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_semi_bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/name"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9sdp"
+                android:layout_gravity="center"
+                android:maxLength="2"
+                android:textStyle="normal" />
+
+        </FrameLayout>
+
+
+
+
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/tvUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_semi_bold"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/name"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_7sdp"
+        android:layout_gravity="center"
+        android:maxLines="3"
+        android:textStyle="normal" />
+
+
+</LinearLayout>

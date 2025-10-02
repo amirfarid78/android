@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.coheser.app">
+
+
+    <queries>
+        <package android:name="com.facebook.katana" />
+        <package android:name="com.facebook.orca" />
+        <package android:name="com.whatsapp" />
+
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:name="android.hardware.camera2.full"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.camera.flash" />
+    <uses-feature
+        android:glEsVersion="0x00030001"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission
+        android:name="com.google.android.gms.permission.AD_ID"
+        tools:node="remove" />
+
+    <application
+        android:name=".simpleclasses.TicTicApp"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/blackStatus"
+        tools:replace="allowBackup,supportsRtl">
+        <activity
+            android:name=".activitesfragments.shoping.ShopA"
+            android:exported="false"
+            android:theme="@style/whiteStatus" />
+        <activity
+            android:name=".activitesfragments.shoping.TagProductNameActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activitesfragments.profile.usersstory.ViewStoryA"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/blackStatus"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".activitesfragments.shoping.AddProducts.AddProductConditionA"
+            android:exported="false"
+            android:theme="@style/whiteStatus" />
+        <activity
+            android:name=".activitesfragments.shoping.AddProducts.AddProductDetailsA"
+            android:exported="false"
+            android:theme="@style/whiteStatus" />
+        <activity
+            android:name=".activitesfragments.shoping.AddProducts.DealMethodA"
+            android:exported="false"
+            android:theme="@style/whiteStatus" />
+        <activity
+            android:name=".activitesfragments.shoping.AddProducts.AddPriceA"
+            android:exported="false"
+            android:theme="@style/whiteStatus" />
+        <activity
+            android:name=".activitesfragments.shoping.AddProducts.AddDetailsA"
+            android:exported="false"
+            android:theme="@style/whiteStatus" />
+        <activity
+            android:name=".activitesfragments.shoping.AddProducts.tabs.AddAllDetailsA"
+            android:exported="false"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.shoping.AddProducts.ChooseCategory"
+            android:exported="true"
+            android:theme="@style/whiteStatus" />
+        <activity
+            android:name=".activitesfragments.shoping.AddProducts.ListProducts"
+            android:exported="true"
+            android:theme="@style/whiteStatus" />
+        <activity
+            android:name=".activitesfragments.shoping.SelectProductA"
+            android:exported="false"
+            android:theme="@style/whiteStatus" />
+        <activity
+            android:name=".activitesfragments.shoping.RatingA"
+            android:exported="false"
+            android:theme="@style/whiteStatus" />
+        <activity
+            android:name=".activitesfragments.shoping.HistoryA"
+            android:exported="false"
+            android:theme="@style/whiteStatus" />
+        <activity
+            android:name=".activitesfragments.shoping.YourCartA"
+            android:exported="false"
+            android:theme="@style/whiteStatus" />
+        <activity
+            android:name=".activitesfragments.shoping.ShopItemDetailA"
+            android:exported="false"
+            android:theme="@style/whiteStatus" />
+        <activity
+            android:name=".activitesfragments.location.MapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activitesfragments.location.LocationPermissionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activitesfragments.location.SetLabelActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activitesfragments.location.SaveAddressActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.location.SearchAddressActivity"
+            android:exported="false"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.location.AddAddressActivity"
+            android:exported="false"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.NotificationActivity"
+            android:exported="false"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.accounts.UserInterestActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitesfragments.videorecording.videothum.ThumbyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activitesfragments.walletandwithdraw.WithdrawalMethodActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitesfragments.accounts.PhoneVarificationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitesfragments.payment.AddCreditCardActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitesfragments.shoping.GalleryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus" />
+        <activity
+            android:name=".activitesfragments.walletandwithdraw.EarnCoinsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.settings.PromotionHistoryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.analytics.VideoAnalytics"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.analytics.AnalyticsActivity"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.settings.CreatorToolsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.videopromotion.VideoPromoteStepsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.settings.AppThemActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.ViewProfileHistoryActivity2"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.videorecording.PreviewStoryVideoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/blackStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.CustomErrorActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.settings.BlockUserListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.creatorplaylist.CreatePlaylistActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.SearchAllUserActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.SendDirectMsg"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.videorecording.FriendsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.soundlists.SectionSoundListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.TagedVideosActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.NearbyVideosActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".activitesfragments.WebviewActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.PrivacyVideoSettingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.chat.ChatActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activitesfragments.InboxActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.search.SearchMainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.SubmitReportActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.ReportTypeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.EditProfileActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.settings.UpdateEmailPhoneNoVerification"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.settings.AddPayoutMethodActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.settings.WalletPaymentA"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.settings.PushNotificationSettingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.settings.PrivacyPolicySettingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.settings.ProfileVarificationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.settings.QrCodeScannerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.settings.UpdateEmailPhoneActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.settings.DeleteAccountActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.settings.ChangePasswordActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.WatchVideosActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/blackStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.settings.ManageProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.settings.AppSpaceClearActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.settings.AppLanguageChangeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.settings.QrCodeProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.SettingAndPrivacyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.SeeFullImageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/blackStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.videorecording.ActVideoTrimmer"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/blackStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.FollowsMainTabActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="stateHidden|adjustNothing" />
+        <activity
+            android:name=".activitesfragments.profile.FavouriteMainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.profile.ProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.accounts.ForgotPassActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.videorecording.VideoRecoderDuetActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/blackStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.AppCompat"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.walletandwithdraw.MyWallet"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.walletandwithdraw.WithdrawCoinsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.soundlists.VideoSoundActivity"
+            android:exported="false"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.videorecording.DraftVideosActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.accounts.LoginActivity"
+            android:exported="true"
+            android:theme="@style/TransparentActivityTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/blackStatus"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainmenu.MainMenuActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/blackStatus"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/domain"
+                    android:pathPrefix="@string/share_profile_endpoint_second"
+                    android:scheme="http" />
+                <data
+                    android:host="@string/domain"
+                    android:pathPrefix="@string/share_profile_endpoint_second"
+                    android:scheme="https" />
+                <data
+                    android:host="@string/domain"
+                    android:pathPrefix="@string/share_video_endpoint_second"
+                    android:scheme="https" />
+                <data
+                    android:host="@string/domain"
+                    android:pathPrefix="@string/share_video_endpoint_second"
+                    android:scheme="http" />
+                <data
+                    android:host="@string/domain"
+                    android:pathPrefix="@string/share_referal_code"
+                    android:scheme="https" />
+                <data
+                    android:host="@string/domain"
+                    android:pathPrefix="@string/share_referal_code"
+                    android:scheme="http" />
+                <data
+                    android:host="@string/domain"
+                    android:pathPrefix="@string/share_stream_endpoint_second"
+                    android:scheme="https" />
+                <data
+                    android:host="@string/domain"
+                    android:pathPrefix="@string/share_stream_endpoint_second"
+                    android:scheme="http" />
+                <data
+                    android:host="@string/domain"
+                    android:pathPrefix="@string/share_space_endpoint_second"
+                    android:scheme="https" />
+                <data
+                    android:host="@string/domain"
+                    android:pathPrefix="@string/share_space_endpoint_second"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activitesfragments.videorecording.VideoRecoderActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/blackStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.videorecording.PostVideoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activitesfragments.soundlists.SoundListMainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".activitesfragments.livestreaming.activities.MultiViewLiveActivity"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/blackStatus"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name="com.coheser.app.activitesfragments.livestreaming.activities.EndStreamingStatsA"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/blackStatus"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <activity
+            android:name=".activitesfragments.livestreaming.activities.MulticastStreamerActivity"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/blackStatus"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".activitesfragments.livestreaming.activities.LiveUsersActivity"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".activitesfragments.spaces.InterestPreferenceA"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name=".activitesfragments.livestreaming.activities.SettingsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/whiteStatus"
+            android:windowSoftInputMode="adjustPan" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher_foreground" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/redColor" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service
+            android:name=".firebasenotification.MyFirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".activitesfragments.shoping.services.ProductImagesService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="shortService">
+            <intent-filter>
+                <action android:name="startservice" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".activitesfragments.spaces.services.RoomStreamService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="shortService" />
+
+        <receiver
+            android:name=".firebasenotification.NotificationActionHandler"
+            android:enabled="true"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/ad_app_id" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${googleApiKey}" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+
+</manifest>

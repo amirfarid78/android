@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/d_top_left_right_radius"
+    android:padding="10dp"
+    tools:context=".activitesfragments.TagProduct.AddStoreSheetFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/mainlayout">
+
+        <ImageView
+            android:id="@+id/crossBtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_cross"
+            android:padding="11dp"
+            app:tint="@color/blackColor"
+            android:layout_gravity="right"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_resturant_image"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suggest to add restaurant"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"/>
+        <LinearLayout
+            android:id="@+id/addDataLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:layout_marginTop="15dp">
+            <EditText
+                android:id="@+id/restNameEdt"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                app:backgroundTint="@null"
+                android:background="@drawable/edit_round_bg"
+                android:hint="Enter restaurant name"
+                android:paddingLeft="15dp"
+                android:textSize="@dimen/_11sdp"/>
+            <EditText
+                android:id="@+id/link1Edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:backgroundTint="@null"
+                android:background="@drawable/edit_round_bg"
+                android:hint="Link 1: Enter a link from existing websites"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textSize="@dimen/_11sdp"
+                android:layout_marginTop="10dp"/>
+            <EditText
+                android:id="@+id/link2Edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:backgroundTint="@null"
+                android:background="@drawable/edit_round_bg"
+                android:hint="Link 2: Enter a link from existing websites"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textSize="@dimen/_11sdp"
+                android:layout_marginTop="10dp"/>
+            <EditText
+                android:id="@+id/link3Edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:backgroundTint="@null"
+                android:background="@drawable/edit_round_bg"
+                android:hint="Link 3: Enter a link from existing websites"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textSize="@dimen/_11sdp"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textSize="@dimen/_9sdp"
+                android:text="Links from GoogleMaps, Apple Maps, DoorDash, Uber Eats, etc., work best, but other links will also suffice. Please at lest provide one link."/>
+            <Button
+                android:id="@+id/contine_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_playlist_blur"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textColor="@color/whiteColor"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/successDataLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="20dp" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_12sdp"
+                android:text="Submission Successful"
+                android:textColor="@color/greenColor2"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                android:text="Thank you for your contribution"
+                android:textColor="@color/blackColor"
+                android:layout_gravity="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold"
+                    android:text="Restaurant Name: "
+                    android:textColor="@color/blackColor"/>
+                <TextView
+                    android:id="@+id/restName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold"
+                    android:text="ABC Restaurant"
+                    android:textColor="@color/blackColor"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_10sdp"
+                    android:text="Date &amp; Time of Submission: "
+                    android:textColor="@color/blackColor"/>
+
+                <TextView
+                    android:id="@+id/dateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_10sdp"
+                    android:text="July15, 2024 - 10:30"
+                    android:textColor="@color/blackColor"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_10sdp"
+                    android:text="Submission ID: "
+                    android:textColor="@color/blackColor"/>
+                <TextView
+                    android:id="@+id/subId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_10sdp"
+                    android:text="#12345"
+                    android:textColor="@color/blackColor"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textSize="@dimen/_9sdp"
+                android:text="Please allow a few hours to a day to let our admins process the information."/>
+            <Button
+                android:id="@+id/goBackBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_playlist_blur"
+                android:text="Go Back"
+                android:textAllCaps="false"
+                android:textColor="@color/whiteColor"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

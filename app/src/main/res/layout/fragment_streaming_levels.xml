@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activitesfragments.livestreaming.fragments.StreamingLevelsFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header Section -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp">
+
+                <!-- Icon -->
+                <ImageView
+                    android:id="@+id/headerIcon"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_coin" />
+
+                <!-- Level Text -->
+                <TextView
+                    android:id="@+id/levelText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/headerIcon"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="8dp"
+                    android:text="Lv 24"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+            </RelativeLayout>
+
+            <!-- Progress Section -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp">
+
+                <!-- ProgressBar -->
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:id="@+id/progressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:progress="70"
+                    android:max="100" />
+
+                <!-- Progress Text -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Send 3.5k coins to the next level."
+                    android:textSize="14sp"
+                    android:textColor="@android:color/darker_gray" />
+            </RelativeLayout>
+
+            <!-- How to Level Up Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="How to level up"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Clapper Levels reward you for sending Live gifts to your favorite creators. Increase your level by spending coins and sending gifts. The higher your level, the more benefits you’ll unlock."
+                    android:textSize="14sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:paddingTop="8dp" />
+            </LinearLayout>
+
+            <!-- Level Medal Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Level Medal"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <!-- Medal Icons Row -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <!-- Medal Icons -->
+                    <ImageView
+                        android:id="@+id/medal1"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_coin"
+                        android:layout_alignParentStart="true" />
+
+                    <ImageView
+                        android:id="@+id/medal2"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_coin"
+                        android:layout_toEndOf="@id/medal1"
+                        android:layout_marginStart="16dp" />
+
+                    <ImageView
+                        android:id="@+id/medal3"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_coin"
+                        android:layout_toEndOf="@id/medal2"
+                        android:layout_marginStart="16dp" />
+
+                    <ImageView
+                        android:id="@+id/medal4"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_coin"
+                        android:layout_toEndOf="@id/medal3"
+                        android:layout_marginStart="16dp" />
+
+                    <ImageView
+                        android:id="@+id/medal5"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_coin"
+                        android:layout_toEndOf="@id/medal4"
+                        android:layout_marginStart="16dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- Avatar Decoration Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Avatar Decoration"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <!-- Avatar Icons Row -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <!-- Avatar Icons -->
+                    <ImageView
+                        android:id="@+id/avatar1"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_coin"
+                        android:layout_alignParentStart="true" />
+
+                    <ImageView
+                        android:id="@+id/avatar2"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_coin"
+                        android:layout_toEndOf="@id/avatar1"
+                        android:layout_marginStart="16dp" />
+
+                    <ImageView
+                        android:id="@+id/avatar3"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_coin"
+                        android:layout_toEndOf="@id/avatar2"
+                        android:layout_marginStart="16dp" />
+
+                    <ImageView
+                        android:id="@+id/avatar4"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_coin"
+                        android:layout_toEndOf="@id/avatar3"
+                        android:layout_marginStart="16dp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

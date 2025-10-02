@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="text_size_normal">16sp</dimen>
+
+    <dimen name="hading_size">20sp</dimen>
+
+    <!-- Setting Activity -->
+    <dimen name="setting_title_content_margin">12dp</dimen>
+    <dimen name="setting_resolution_item_radius">24dp</dimen>
+    <dimen name="setting_resolution_item_border">2px</dimen>
+    <dimen name="setting_resolution_item_padding">6dp</dimen>
+    <dimen name="setting_divider_height">3px</dimen>
+    <dimen name="setting_switch_width">56dp</dimen>
+    <dimen name="setting_switch_height">32dp</dimen>
+    <dimen name="setting_switch_radius">16dp</dimen>
+    <dimen name="setting_switch_thumb_size">28dp</dimen>
+    <dimen name="setting_switch_track_padding">2dp</dimen>
+
+
+    <!-- Live Activity -->
+    <dimen name="live_stat_margin_bottom">68dp</dimen>
+    <dimen name="live_room_bg_icon_size">180dp</dimen>
+    <dimen name="_10dp">10dp</dimen>
+    <dimen name="_5dp">5dp</dimen>
+
+
+    <dimen name="thumb_height">30dp</dimen>
+    <dimen name="thumb_width">30dp</dimen>
+
+
+    <dimen name="frames_video_height">54dp</dimen>
+    <dimen name="list_item_spacing">16dp</dimen>
+    <dimen name="list_item_spacing_half">8dp</dimen>
+
+
+</resources>

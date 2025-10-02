@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/d_round_top_corners_white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/titleLayout">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rechargeTitleLayout">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:src="@drawable/ic_coin"
+                        android:layout_marginStart="@dimen/_5sdp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:text="@string/get_5_extra_coin_now"
+                            android:textSize="@dimen/_12sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_35sdp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Recharge"
+                        android:id="@+id/bonusRechargeBtn"
+                        android:textColor="@color/whiteColor"
+                        android:background="@drawable/btn_color_round_order"
+                        android:layout_alignParentEnd="true"
+                        android:paddingHorizontal="@dimen/_15sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:layout_marginHorizontal="@dimen/_10sdp"/>
+                </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/wishListTitleLayout"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/backBtn"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:src="@drawable/ic_back_v2"
+                            app:tint="@color/black"
+                            android:paddingVertical="@dimen/_5sdp"
+                            android:layout_marginStart="@dimen/_5sdp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:text="@string/choose_the_wish_gift_and_quantity"
+                            android:textSize="@dimen/_12sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_35sdp"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/imageSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_300sdp"
+                    android:layout_alignParentTop="false"
+                    android:layout_centerHorizontal="false"
+                    android:minHeight="@dimen/_150sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:sliderAnimationDuration="600"
+                    app:sliderAutoCycleDirection="right"
+                    app:sliderAutoCycleEnabled="false"
+                    app:sliderIndicatorAnimationDuration="600"
+                    app:sliderIndicatorGravity="center_horizontal|bottom"
+                    app:sliderIndicatorMargin="@dimen/_6sdp"
+                    app:sliderIndicatorOrientation="horizontal"
+                    app:sliderIndicatorPadding="@dimen/_1sdp"
+                    app:sliderIndicatorRadius="@dimen/_1sdp"
+                    android:layout_below="@+id/titleLayout"
+                    app:sliderIndicatorSelectedColor="@color/appColor"
+                    app:sliderIndicatorUnselectedColor="@color/darkgray"
+                    app:sliderScrollTimeInSec="1"
+                    app:sliderStartAutoCycle="false" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_22sdp"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_12sdp">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:id="@+id/giftCountLayout"
+                    android:visibility="gone"
+                    android:layout_toStartOf="@+id/rightLayout">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20"
+                        android:id="@+id/count20Txt"
+                        android:textColor="@color/black"
+                        android:background="@drawable/d_less_round_gray_transparent"
+                        android:layout_alignParentEnd="true"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:layout_marginHorizontal="@dimen/_2sdp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="50"
+                        android:id="@+id/count50Txt"
+                        android:textColor="@color/black"
+                        android:background="@drawable/d_less_round_gray_transparent"
+                        android:layout_alignParentEnd="true"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:layout_marginHorizontal="@dimen/_2sdp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100"
+                        android:id="@+id/count100Txt"
+                        android:textColor="@color/black"
+                        android:background="@drawable/d_less_round_gray_transparent"
+                        android:layout_alignParentEnd="true"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:layout_marginHorizontal="@dimen/_2sdp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/customize"
+                        android:id="@+id/customizeTxt"
+                        android:textColor="@color/black"
+                        android:background="@drawable/d_less_round_gray_transparent"
+                        android:layout_alignParentEnd="true"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:layout_marginHorizontal="@dimen/_2sdp"/>
+
+                </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/rightLayout"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true">
+
+                <LinearLayout
+                    android:id="@+id/recharge_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/_26sdp"
+                        android:layout_height="@dimen/_26sdp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_coin" />
+
+
+                    <TextView
+                        android:id="@+id/coins_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp"
+                        android:textStyle="bold" />
+
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:rotation="180"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/recv_ic_arrow"
+                        app:tint="@color/black" />
+
+
+                </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/save"
+                        android:visibility="gone"
+                        android:id="@+id/saveBtn"
+                        android:textColor="@color/whiteColor"
+                        android:background="@drawable/btn_color_round_order"
+                        android:layout_alignParentEnd="true"
+                        android:paddingHorizontal="@dimen/_15sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:layout_marginHorizontal="@dimen/_10sdp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>
+</layout>

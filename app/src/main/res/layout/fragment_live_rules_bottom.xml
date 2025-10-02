@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activitesfragments.livestreaming.fragments.LiveRulesBottomF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@drawable/d_top_left_right_radius_white">
+
+        <ImageView
+            android:id="@+id/closeBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:tint="@color/blackColor"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_cross"
+            android:contentDescription="Close" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/live_rules"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold"
+            android:textColor="@color/blackColor"
+            android:includeFontPadding="false"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginTop="8dp"
+            android:text="@string/our_goal_is_to_provide_the_best_livestream_experience_agree_to_all_before_you_host"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/blackColor" />
+
+        <!-- Rules List -->
+        <LinearLayout
+            android:id="@+id/rulesLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/description"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rule1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_nudity"
+                android:textSize="@dimen/_10sdp"
+                android:theme="@style/RadioButton"/>
+
+            <RadioButton
+                android:id="@+id/rule2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_hate_speech_or_abusive_language"
+                android:textSize="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:theme="@style/RadioButton"/>
+
+            <RadioButton
+                android:id="@+id/rule3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_illegal_activities"
+                android:textSize="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:theme="@style/RadioButton" />
+
+            <RadioButton
+                android:id="@+id/rule4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/i_will_adhere_to_the_community_guidelines"
+                android:textSize="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:theme="@style/RadioButton" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/agreeButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginVertical="@dimen/_15sdp"
+            android:layout_below="@id/rulesLayout"
+            android:background="@drawable/disable_round_btn"
+            android:text="@string/agree"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+</layout>

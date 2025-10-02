@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="@dimen/_130sdp"
+            app:cardBackgroundColor="@color/appColor"
+            app:cardCornerRadius="@dimen/_15sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/profileblurImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    app:actualImageScaleType="centerCrop"
+                    app:failureImageScaleType="centerCrop"
+                    app:placeholderImageScaleType="centerCrop"
+                    fresco:placeholderImage="@drawable/image_placeholder"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorblack_50"/>
+
+                <LinearLayout
+                android:id="@+id/tabView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/ivProfileOne"
+                            android:layout_width="@dimen/_28sdp"
+                            android:layout_height="@dimen/_28sdp"
+                            app:actualImageScaleType="centerCrop"
+                            app:failureImageScaleType="centerCrop"
+                            app:placeholderImageScaleType="centerCrop"
+                            fresco:placeholderImage="@drawable/ic_user_icon"
+                            fresco:roundAsCircle="true"
+                            fresco:roundingBorderColor="@color/appColor"
+                            fresco:roundingBorderWidth="@dimen/_2sdp" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/ivProfileSecond"
+                            android:layout_width="@dimen/_28sdp"
+                            android:layout_height="@dimen/_28sdp"
+                            android:layout_marginStart="@dimen/_26sdp"
+                            app:actualImageScaleType="centerCrop"
+                            app:failureImageScaleType="centerCrop"
+                            app:placeholderImageScaleType="centerCrop"
+                            fresco:placeholderImage="@drawable/ic_user_icon"
+                            fresco:roundAsCircle="true"
+                            fresco:roundingBorderColor="@color/appColor"
+                            fresco:roundingBorderWidth="@dimen/_2sdp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/ivProfilethird"
+                            android:layout_width="@dimen/_28sdp"
+                            android:layout_height="@dimen/_28sdp"
+                            app:actualImageScaleType="centerCrop"
+                            app:failureImageScaleType="centerCrop"
+                            app:placeholderImageScaleType="centerCrop"
+                            fresco:placeholderImage="@drawable/ic_user_icon"
+                            fresco:roundAsCircle="true"
+                            fresco:roundingBorderColor="@color/appColor"
+                            fresco:roundingBorderWidth="@dimen/_2sdp" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/ivProfileforth"
+                            android:layout_width="@dimen/_28sdp"
+                            android:layout_height="@dimen/_28sdp"
+                            android:layout_marginStart="@dimen/_26sdp"
+                            app:actualImageScaleType="centerCrop"
+                            app:failureImageScaleType="centerCrop"
+                            app:placeholderImageScaleType="centerCrop"
+                            fresco:placeholderImage="@drawable/ic_user_icon"
+                            fresco:roundAsCircle="true"
+                            fresco:roundingBorderColor="@color/appColor"
+                            fresco:roundingBorderWidth="@dimen/_2sdp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/roomNameTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="Room Name"
+                        android:gravity="center"
+                        android:drawablePadding="@dimen/_2sdp"
+                        android:drawableTint="@color/whiteColor"
+                        android:drawableStart="@drawable/ic_friends"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/_9sdp"
+                        android:textStyle="bold"/>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="@dimen/_10sdp"
+                    android:id="@+id/topicTxt"
+
+                    android:layout_marginTop="@dimen/_5sdp"/>
+
+
+
+            </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+</layout>

@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".activitesfragments.location.SaveAddressActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/d_bottom_gray_line"
+        android:paddingStart="@dimen/_12sdp"
+        android:paddingEnd="@dimen/_12sdp">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:paddingVertical="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_40sdp"
+            android:scaleType="fitStart"
+            android:src="@drawable/ic_back_btn"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/toolTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/save_address"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/deleteBtn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_delete_outline"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_marginBottom="60dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/locTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="@string/locationtitle"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
+
+            <TextView
+                android:id="@+id/locAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="@string/locationdetail"
+                android:textColor="@color/dgraycolor"
+                android:textSize="@dimen/_12sdp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightgraycolor"
+                android:layout_marginTop="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/apartment_suite"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <EditText
+                        android:id="@+id/apartmentEdt"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        app:backgroundTint="@null"
+                        android:paddingHorizontal="@dimen/_11sdp"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:background="@drawable/round_graybg20" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/entry_code"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <EditText
+                        android:id="@+id/enrtyCodeEdt"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        app:backgroundTint="@null"
+                        android:paddingHorizontal="@dimen/_11sdp"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:background="@drawable/round_graybg20" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/building_name"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_10dp"
+                android:textSize="@dimen/_12sdp" />
+
+            <EditText
+                android:id="@+id/buildingEdt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:backgroundTint="@null"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:paddingHorizontal="@dimen/_11sdp"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/black"
+                android:background="@drawable/round_graybg20" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/where_is_your_location"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_10dp"
+                android:textSize="@dimen/_12sdp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="@dimen/_6sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp">
+
+                    <fragment
+                        android:id="@+id/map"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/_9sdp"
+                        app:cardCornerRadius="15dp">
+
+                        <TextView
+                            android:id="@+id/adjustPin"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/adjust_pin"
+                            android:textColor="@color/black"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_11sdp"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp" />
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Drop-off Option"
+                android:textColor="@color/blackColor"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_10dp"
+                android:textSize="@dimen/_12sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_10dp">
+
+                <TextView
+                    android:id="@+id/handoverBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hand_it_to_me"
+                    android:background="@drawable/round_graybg50"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:backgroundTint="@color/lightgraycolor"
+                    android:textColor="@color/blackColor"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/leaveDropBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/leave_it_at_my_door"
+                    android:background="@drawable/round_graybg50"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:backgroundTint="@color/appColor"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="@dimen/_12sdp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/dropOffNoteEdt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/round_graybg20"
+                android:hint="@string/e_g_ring_the_bell_after_dropoff_leave_next_to_the_porch_call_upon_arrival_etc"
+                android:padding="10dp"
+                android:paddingStart="@dimen/_10dp"
+                android:textSize="@dimen/_11sdp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightgraycolor"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address Label"
+                android:textColor="@color/blackColor"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_10dp"
+                android:textSize="@dimen/_12sdp" />
+
+            <EditText
+                android:id="@+id/labelEdt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:backgroundTint="@null"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:hint="@string/e_g_home_work_gym"
+                android:paddingHorizontal="@dimen/_11sdp"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/black"
+                android:background="@drawable/round_graybg20" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/round_graybg20"
+                android:backgroundTint="@color/appColor_15"
+                android:text="@string/your_labeled_addresses_are_used_to_personalized_your_experience_across_liver_only_you_can_see_the_label_and_you_can_unset_it_at_anytime"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightgraycolor"
+                android:layout_marginTop="10dp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/saveAddress"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:backgroundTint="@null"
+        android:background="@drawable/btn_color_round_order"
+        android:text="@string/save_address"
+        android:textColor="@color/whiteColor"
+        android:textSize="@dimen/_14sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_10sdp" />
+
+
+</RelativeLayout>

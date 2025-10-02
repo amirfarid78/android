@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    tools:context=".activitesfragments.livestreaming.fragments.StreamingStartF">
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/selectionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:paddingBottom="@dimen/_20sdp"
+                android:scaleType="fitStart"
+                android:src="@drawable/ic_cross" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edt_stream_draw_rectengle"
+                android:padding="8dp">
+
+                <RelativeLayout
+                    android:id="@+id/imageLayout"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_60sdp">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/user_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#f2f2f2"
+                        android:layout_above="@+id/changeBtn"
+                        fresco:placeholderImage="@drawable/ic_user_icon"/>
+
+                    <TextView
+                        android:id="@+id/changeBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/colorblack_80"
+                        android:text="@string/change"
+                        android:paddingVertical="@dimen/_1sdp"
+                        android:includeFontPadding="false"
+                        android:fontFamily="@font/font_serif"
+                        android:textAlignment="center"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/_10sdp" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/descriptionTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_toEndOf="@id/imageLayout"
+                    android:backgroundTint="@color/transparent"
+                    android:gravity="start|top"
+                    android:hint="@string/enter_streaming_description"
+                    android:minLines="3"
+                    android:fontFamily="@font/font_serif"
+                    android:textColorHint="@color/whiteColor_80"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="@dimen/_11sdp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp">
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:id="@+id/wishListLayout"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:paddingVertical="@dimen/_2sdp"
+                    android:background="@drawable/edt_stream_draw_rectengle">
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/ic_wishlist"
+                        android:paddingVertical="@dimen/_2sdp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/set_your_wish_list"
+                        android:fontFamily="@font/sf_pro_bold"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:textAlignment="center"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/_11sdp"/>
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:id="@+id/goalLayout"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:paddingVertical="@dimen/_2sdp"
+                android:background="@drawable/edt_stream_draw_rectengle"
+                android:layout_gravity="center_horizontal">
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:paddingVertical="@dimen/_2sdp"
+                    android:src="@drawable/ic_coins_goal"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/set_your_live_goal"
+                    android:fontFamily="@font/sf_pro_bold"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:textAlignment="center"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="@dimen/_11sdp"/>
+            </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/GoLiveBtn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/d_round_red25"
+            android:gravity="center"
+            android:text="@string/live_streaming"
+            android:textSize="@dimen/_11sdp"
+            android:textAllCaps="true"
+            android:textColor="@color/whiteColor"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/GoLiveBtn"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/btnss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/flipCameraBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/ic_flip_cam" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/flip"
+                        android:textSize="@dimen/_11sdp"
+                        android:fontFamily="@font/sf_pro_bold"
+                        android:textColor="@color/whiteColor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/enhanceBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/btn_beauty_enabled"
+                        app:tint="@color/whiteColor" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/enhance"
+                        android:textSize="@dimen/_11sdp"
+                        android:fontFamily="@font/sf_pro_bold"
+                        android:textColor="@color/whiteColor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tagBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/ic_shop_line"
+                        app:tint="@color/whiteColor" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/business"
+                        android:textSize="@dimen/_11sdp"
+                        android:fontFamily="@font/sf_pro_bold"
+                        android:textColor="@color/whiteColor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/settingBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/btn_setting"
+                        app:tint="@color/whiteColor" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Settings"
+                        android:textColor="@color/whiteColor" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/reyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/GoLiveBtn"
+                android:orientation="horizontal"
+                android:minHeight="@dimen/_30sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>
+</layout>

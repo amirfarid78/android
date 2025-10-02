@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activitiesfragments.creategroup.CreateRoomF">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/white"
+        android:id="@+id/CreateRoomF">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/appColor_15">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="@dimen/_44sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:scaleType="fitStart"
+                android:src="@drawable/ic_cross"
+                app:tint="@color/black" />
+
+
+            <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/_120sdp">
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_alignParentBottom="true">
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/app_name"
+                       android:textColor="@color/black"
+                       android:textSize="@dimen/_25sdp"
+                       android:textStyle="bold"/>
+                   <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/spaces"
+                   android:textColor="@color/black"
+                   android:textSize="@dimen/_25sdp"
+                   android:layout_marginStart="@dimen/_5sdp"
+                   android:textStyle="bold"/>
+               </LinearLayout>
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="@dimen/_100sdp"
+                   android:scaleType="fitCenter"
+                   app:tint="@color/appColor_50"
+                   android:layout_alignParentEnd="true"
+                   android:src="@drawable/ic_space_mic"/>
+           </RelativeLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                android:id="@+id/titleEdit"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:background="@drawable/ractengle_white"
+                android:textColorHint="@color/darkgray"
+                android:hint="What's the topic?"
+                android:layout_marginTop="@dimen/_30sdp"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:background="@drawable/ractengle_white">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Who can listen?"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/everyone"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:layout_alignParentEnd="true"
+               />
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ Add Topics"
+                android:id="@+id/addTopicTxt"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textColor="@color/appColor"
+                android:textSize="@dimen/_14sdp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:id="@+id/topicListLayout">
+
+                <ImageView
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:src="@drawable/ic_add_round"
+                    app:tint="@color/black"
+                    android:id="@+id/addTopicbtn"/>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:id="@+id/topicList"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:gravity="start"
+                android:text="@string/create_space_description"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+
+
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:layout_alignParentBottom="true">
+
+                <LinearLayout
+                    android:id="@+id/tabGenrateGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_38sdp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/d_round_red25"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:text="@string/start_your_space"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/tabChoosePeople"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_25sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_38sdp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_rounded_background"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                        android:layout_marginStart="@dimen/_30sdp"
+                        android:layout_marginEnd="@dimen/_30sdp"
+                        android:text="@string/choose_people_"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+</layout>

@@ -1,0 +1,142 @@
+{
+  "project_info": {
+    "project_number": "480603821190",
+    "project_id": "cheeziup-142e0",
+    "storage_bucket": "cheeziup-142e0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480603821190:android:46ecd0d927a01b46dfad07",
+        "android_client_info": {
+          "package_name": "com.cheeziupdpl.coheser"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "480603821190-jdagfrd8u5lt42qkb40ff6ogjp5jc749.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cheeziupdpl.coheser",
+            "certificate_hash": "41871f3d4f5e73850b7b6fdf88b844c4a3af0f0b"
+          }
+        },
+        {
+          "client_id": "480603821190-ske8mrlu5spmi5pejfk9bsqurbdhcpk9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxW8mfwJT8xMyEPwkAktKV_QS0L427BRU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "480603821190-lfr1hg74v8tpfe6el86c2duhotme5efb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "480603821190-9dpmabpk9abjfsdutj7miqjspb2efnj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.coheser.cheeziup"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480603821190:android:e9a3ae31542358fbdfad07",
+        "android_client_info": {
+          "package_name": "com.coheser.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "480603821190-o9liusvft45mkgu1kpeep8oktf42gd0k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.coheser.app",
+            "certificate_hash": "2eed0bf1aad5b62193915a7351cb363e279ee8b5"
+          }
+        },
+        {
+          "client_id": "480603821190-ske8mrlu5spmi5pejfk9bsqurbdhcpk9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxW8mfwJT8xMyEPwkAktKV_QS0L427BRU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "480603821190-lfr1hg74v8tpfe6el86c2duhotme5efb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "480603821190-9dpmabpk9abjfsdutj7miqjspb2efnj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.coheser.cheeziup"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480603821190:android:34342ef74b336c51dfad07",
+        "android_client_info": {
+          "package_name": "com.coheser.cheziup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "480603821190-sk0r1evu3j625p39h0ae9tgsm7ohf656.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.coheser.cheziup",
+            "certificate_hash": "41871f3d4f5e73850b7b6fdf88b844c4a3af0f0b"
+          }
+        },
+        {
+          "client_id": "480603821190-ske8mrlu5spmi5pejfk9bsqurbdhcpk9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxW8mfwJT8xMyEPwkAktKV_QS0L427BRU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "480603821190-lfr1hg74v8tpfe6el86c2duhotme5efb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "480603821190-9dpmabpk9abjfsdutj7miqjspb2efnj5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.coheser.cheeziup"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

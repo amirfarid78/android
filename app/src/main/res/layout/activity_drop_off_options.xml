@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/activity_horizontal_margin"
+    android:fitsSystemWindows="true"
+    tools:context=".activitesfragments.location.DropOffOptionsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+
+            <ImageButton
+                android:id="@+id/back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@color/transparent"
+                android:paddingVertical="@dimen/_8sdp"
+                android:paddingEnd="@dimen/_40sdp"
+                android:scaleType="fitStart"
+                android:src="@drawable/ic_back_btn"
+                app:tint="@color/black" />
+
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/drop_off_options"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/how_would_you_like_the_order_to_be_dropped_off"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/radioHandToMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hand_it_to_me"/>
+
+            <RadioButton
+                android:id="@+id/radioLeaveAtDoor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/leave_it_at_my_door"
+                android:layout_marginTop="8dp"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/drop_off_instructions"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/e_g_ring_the_bell_after_dropoff_leave_next_to_the_porch_call_upon_arrival_etc"
+            android:layout_marginTop="8dp"
+            android:minLines="5"
+            android:gravity="top"
+            android:textSize="@dimen/_11sdp"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:background="@color/lightgraycolor"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/do_not_add_order_changes_or_requests_here"
+            android:textColor="#888888"
+            android:layout_marginTop="8dp"/>
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/continueBtn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/d_round_colord_6">
+
+
+        <TextView
+            android:id="@+id/placeOrderTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="@string/continue_"
+            android:textColor="@color/whiteColor"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

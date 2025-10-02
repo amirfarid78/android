@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_dialog_background"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Close Icon -->
+    <ImageView
+        android:id="@+id/dialog_close_icon"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_gravity="end"
+        android:contentDescription="@string/close_dialog"
+        android:src="@drawable/ic_close_cross" />
+
+    <!-- Text Message -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/email_verification_required"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <!-- OK Button -->
+    <Button
+        android:id="@+id/dialog_ok_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/red_bg"
+        android:text="@string/okay"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_5dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_toStartOf="@+id/buttonLayout">
+
+            <RelativeLayout
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:scaleType="fitXY"
+                    app:placeholderImage="@drawable/image_placeholder"
+                    app:placeholderImageScaleType="centerCrop" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/noPicLayout"
+                    android:visibility="gone"
+                    android:background="@color/colorblack_50">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/whiteColor"
+                        android:gravity="center"
+                        android:textSize="@dimen/_9sdp"
+                        android:fontFamily="@font/sf_pro_semi_bold"
+                        android:text="No Photo is\n available"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/store_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:text="Taco Bell"
+                    android:maxLines="1"
+                    android:textColor="@color/blackColor"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/address_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:drawableStart="@drawable/ic_location_new"
+                        android:drawablePadding="7dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/newback"
+                        android:textSize="@dimen/_9sdp" />
+
+
+                <TextView
+                    android:id="@+id/timing_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_clock"
+                    android:drawablePadding="7dp"
+                    android:text="Open 24 hours"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textColor="@color/greenColor2"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:textSize="@dimen/_10sdp"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/buttonLayout"
+                android:layout_centerVertical="true">
+
+                <ToggleButton
+                    android:id="@+id/tagShop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/toggle_selector"
+                    android:paddingVertical="@dimen/_5dp"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/toggle_text_color_selector"
+                    android:textOff="Tag"
+                    android:textOn="Tagged"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tvFollowBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_22sdp"
+                    android:background="@drawable/d_round_colord_6"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_20sdp"
+                    android:includeFontPadding="false"
+                    android:text="@string/follow"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/unFriendBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_22sdp"
+                    android:background="@drawable/d_round_gray_8"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_20sdp"
+                    android:includeFontPadding="false"
+                    android:text="@string/followed"
+                    android:textColor="@color/blackColor"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

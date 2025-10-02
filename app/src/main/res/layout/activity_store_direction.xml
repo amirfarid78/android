@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activitesfragments.profile.StoreDirectionActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_12sdp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_centerVertical="true"
+                android:paddingVertical="@dimen/_8sdp"
+                android:paddingEnd="@dimen/_40sdp"
+                android:scaleType="fitStart"
+                android:src="@drawable/ic_back_btn"
+                app:tint="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:id="@+id/storeNameTxt"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/map_main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:layout_above="@+id/bottomLayout"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottomLayout"
+            android:layout_alignParentBottom="true">
+
+            <RelativeLayout
+
+                android:id="@+id/dataLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    app:tabGravity="fill"
+                    app:tabIndicatorColor="@color/appColor"
+                    app:tabIndicatorFullWidth="true"
+                    app:tabIndicatorHeight="@dimen/_2sdp"
+                    app:tabMode="fixed"
+                    app:tabSelectedTextColor="@color/black"
+                    app:tabTextColor="@color/dimgray" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_below="@+id/tabs">
+                    <LinearLayout
+                        android:id="@+id/lay1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/address_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sdp"
+                            android:text="Store Address"
+                            android:layout_marginTop="@dimen/_15sdp"/>
+
+                        <TextView
+                            android:id="@+id/timing_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Open 24 hours"
+                            android:textColor="@color/greenColor2"
+                            android:singleLine="true"
+                            android:ellipsize="marquee"
+                            android:textSize="@dimen/_10sdp"/>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/distancetxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:text="0 mi"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/_15sdp"/>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:layout_below="@id/lay1">
+
+                        <Button
+                            android:id="@+id/directionBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_38sdp"
+                            android:layout_weight="1"
+                            android:layout_below="@+id/text_div"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="@dimen/_22sdp"
+                            android:gravity="center"
+                            android:textAllCaps="false"
+                            android:text="Get Direction"
+                            android:textColor="@color/whiteColor"
+                            android:textSize="@dimen/_11sdp"
+                            android:theme="@style/ButtonStyle" />
+                        <Button
+                            android:id="@+id/copyBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_38sdp"
+                            android:layout_weight="1"
+                            android:layout_below="@+id/text_div"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="@dimen/_22sdp"
+                            android:gravity="center"
+                            android:text="Copy address"
+                            android:textAllCaps="false"
+                            android:textColor="@color/blackColor"
+                            android:textSize="@dimen/_11sdp"
+                            android:theme="@style/ButtonStyle2" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_view_container"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shimmer_duration="@integer/shimmer_duration"
+                app:shimmer_repeat_delay="@integer/shimmer_delay">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center">
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="25dp"
+                                android:background="@color/gainsboro"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center">
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="25dp"
+                                android:background="@color/gainsboro"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@+id/tabs"
+                        android:padding="@dimen/_10sdp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:background="@color/gainsboro"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="@dimen/_15sdp"/>
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:background="@color/gainsboro"
+                                android:layout_marginTop="@dimen/_15sdp"/>
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/greenColor2"
+                            android:singleLine="true"
+                            android:layout_marginTop="4dp"
+                            android:background="@color/gainsboro"
+                            android:ellipsize="marquee"
+                            android:textSize="@dimen/_10sdp"/>
+
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_10sdp">
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_38sdp"
+                            android:layout_weight="1"
+                            android:layout_marginTop="@dimen/_22sdp"
+                            android:theme="@style/ButtonStyle" />
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_38sdp"
+                            android:layout_weight="1"
+                            android:layout_below="@+id/text_div"
+                            android:layout_centerInParent="true"
+                            android:backgroundTint="@color/gainsboro"
+                            android:layout_marginTop="@dimen/_22sdp"
+                            android:theme="@style/ButtonStyle2" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</layout>

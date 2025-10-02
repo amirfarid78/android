@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/parent.contentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="5dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/iv_shirt"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    app:actualImageScaleType="centerCrop"
+                    app:placeholderImage="@drawable/image_placeholder"
+                    app:placeholderImageScaleType="centerCrop"
+                    app:roundedCornerRadius="4dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="40dp"
+                            android:layout_marginRight="40dp"
+                            android:maxWidth="200dp"
+                            android:maxLines="2"
+                            android:text="The Vietnam i neeed to get you alone anlsandjandjllsakdjlkajsd"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/delete_product_btn"
+                            android:layout_width="20dp"
+                            android:layout_height="18dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/ic_cross"
+                            app:tint="@color/appColor" />
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_product_name"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_size_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/size"
+                            android:textColor="@color/delete_message_text"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/tv_size"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="2dp"
+                            android:layout_toEndOf="@+id/tv_size_label"
+                            android:layout_toRightOf="@+id/tv_size_label"
+                            android:gravity="center_horizontal"
+                            android:text="300"
+                            android:textColor="@color/black"
+                            android:textSize="12dp" />
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp">
+
+                            <RelativeLayout
+                                android:id="@+id/price_rlt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_current_price"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$0.0"
+                                    android:textColor="@color/appColor"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true">
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_plus"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/plus_special_drable_carrot_lite">
+
+                                    <ImageView
+                                        android:layout_width="14dp"
+                                        android:layout_height="14dp"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginEnd="0dp"
+                                        android:layout_marginRight="0dp"
+                                        android:src="@drawable/plus" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_counter"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toStartOf="@+id/rl_plus"
+                                    android:layout_toLeftOf="@+id/rl_plus">
+
+                                    <TextView
+                                        android:id="@+id/tv_quantity"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="30dp"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center"
+                                        android:text="1 "
+                                        android:textColor="@color/black"
+                                        android:textSize="14dp" />
+
+                                    <TextView
+                                        android:layout_width="50dp"
+                                        android:layout_height="30dp"
+                                        android:layout_marginEnd="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_toEndOf="@+id/tv_quantity"
+                                        android:layout_toRightOf="@+id/tv_quantity"
+                                        android:gravity="center"
+                                        android:text="@string/pie"
+                                        android:textColor="@color/black"
+                                        android:textSize="14dp" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_minus"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_centerInParent="true"
+                                    android:layout_toStartOf="@+id/rl_counter"
+                                    android:layout_toLeftOf="@+id/rl_counter"
+                                    android:background="@drawable/minus_special_drable_carrot_lite">
+
+                                    <ImageView
+                                        android:layout_width="14dp"
+                                        android:layout_height="14dp"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginEnd="0dp"
+                                        android:layout_marginRight="0dp"
+                                        android:src="@drawable/ic_minus"
+                                        app:tint="@color/appColor" />
+
+
+                                </RelativeLayout>
+
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="13dp"
+            android:background="@color/lightgraycolor" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

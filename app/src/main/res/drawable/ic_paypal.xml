@@ -1,0 +1,36 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="512dp"
+    android:height="512dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+    <path android:pathData="M106.17,6L405.83,6A100.17,100.17 0,0 1,506 106.17L506,405.83A100.17,100.17 0,0 1,405.83 506L106.17,506A100.17,100.17 0,0 1,6 405.83L6,106.17A100.17,100.17 0,0 1,106.17 6z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:endX="103.57"
+                android:endY="-8.02"
+                android:startX="408.43"
+                android:startY="520.02"
+                android:type="linear">
+                <item
+                    android:color="#FF038AF7"
+                    android:offset="0" />
+                <item
+                    android:color="#FF0257D1"
+                    android:offset="0.35" />
+                <item
+                    android:color="#FF000695"
+                    android:offset="0.93" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:fillColor="#bfd3e6"
+        android:pathData="M226.71,156.57a9.56,9.56 0,0 0,-9.43 8.06L201.6,264.06a9.55,9.55 0,0 1,9.44 -8.06h45.93a93.82,93.82 0,0 0,92.62 -79.43,76.56 76.56,0 0,0 0.9,-10.31 87.18,87.18 0,0 0,-40.67 -9.69Z" />
+    <path
+        android:fillColor="#97bfe3"
+        android:pathData="M350.5,166.26a76.72,76.72 0,0 1,-0.9 10.31,93.82 93.82,0 0,1 -92.62,79.43H211.04a9.55,9.55 0,0 0,-9.43 8.06l-14.41,91.36 -9.03,57.31a7.75,7.75 0,0 0,7.66 8.97h49.86a9.56,9.56 0,0 0,9.44 -8.06l13.13,-83.29a9.56,9.56 0,0 1,9.44 -8.06h29.35a93.82,93.82 0,0 0,92.62 -79.43c5.09,-32.44 -11.25,-61.95 -39.16,-76.59Z" />
+    <path
+        android:fillColor="#c9d9e8"
+        android:pathData="M170.07,90.3a9.55,9.55 0,0 0,-9.43 8.06l-39.12,248.09a7.76,7.76 0,0 0,7.67 8.97H187.2L201.6,264.06l15.68,-99.42a9.56,9.56 0,0 1,9.43 -8.06h83.12a87.22,87.22 0,0 1,40.67 9.69C351.3,124.65 316.97,90.3 269.77,90.3Z" />
+</vector>

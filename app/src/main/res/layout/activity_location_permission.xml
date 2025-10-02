@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activitesfragments.location.LocationPermissionActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_70sdp"
+        android:fitsSystemWindows="true">
+
+        <include layout="@layout/location_permission_layout"
+            android:id="@+id/locationPermissionLayout"/>
+
+
+    </RelativeLayout>
+</layout>

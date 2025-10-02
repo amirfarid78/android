@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="@dimen/_15sdp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/promotion_details"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sdp"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivVideo"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                app:placeholderImage="@drawable/image_placeholder"
+                app:roundedCornerRadius="@dimen/_4sdp"
+                android:layout_marginTop="10dp"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/txtDestinationLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/destination"
+                android:textColor="@color/darkgray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txtDestinationValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/txtActionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_button"
+                android:textColor="@color/darkgray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txtActionValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:paddingVertical="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/txtAudienceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/audience"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txtAudienceValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text=""
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_10sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/duration"
+                android:textColor="@color/darkgray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/durationTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_10sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_coins"
+                android:textColor="@color/darkgray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/totalCoinsTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="0"
+                android:textColor="@color/black"
+                android:drawableRight="@drawable/coind_drawable"
+                android:drawablePadding="@dimen/_3sdp"
+                android:textSize="14sp" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_10sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/coins_spent"
+                android:textColor="@color/darkgray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/spentCoinsTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="0"
+                android:textColor="@color/black"
+                android:drawableRight="@drawable/coind_drawable"
+                android:drawablePadding="@dimen/_3sdp"
+                android:textSize="14sp" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_10sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/video_views"
+                android:textColor="@color/darkgray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/videoViewsTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_10sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/link_clicks"
+                android:textColor="@color/darkgray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/linkClickTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </TableRow>
+    </TableLayout>
+    <Button
+        android:id="@+id/okayBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/okay"
+        android:background="@drawable/round_appcolor"
+        android:backgroundTint="@color/appColor"
+        android:textColor="@color/whiteColor"
+        android:textStyle="bold"
+        android:textSize="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_15sdp" />
+
+</LinearLayout>

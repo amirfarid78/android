@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tabUserPic"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/_80sdp"
+    android:layout_alignParentTop="true"
+    android:layout_centerVertical="true"
+    android:layout_marginEnd="@dimen/_6sdp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp">
+
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivUserPic"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_centerInParent="true"
+                app:actualImageScaleType="centerCrop"
+                app:failureImageScaleType="centerCrop"
+                app:placeholderImage="@drawable/ic_user_icon"
+                app:placeholderImageScaleType="centerCrop"
+                app:roundAsCircle="true" />
+
+            <com.coheser.app.simpleclasses.CircleDivisionView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                app:strokeWidth="@dimen/_2sdp"
+                app:dividerSpace="2"
+                app:strokeLineColor="@color/appColor"
+                app:counts="2"
+                android:id="@+id/circleStatusBar"/>
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tvUserPic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:minLines="2"
+            android:paddingHorizontal="@dimen/_2sdp"
+            android:text="@string/create"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+</RelativeLayout>

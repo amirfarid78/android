@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">@color/appColor</color>
+
+    <color name="appColor">#EA1B1A</color>
+    <color name="appColorDark">#B7332F</color>
+    <color name="appColorDark1">#F80322</color>
+    <color name="appColor_15">#26EA1B1A</color>
+    <color name="appColor_50">#80EA1B1A</color>
+    <color name="whiteColor">#ffffff</color>
+    <color name="whiteColor_80">#CCFFFFFF</color>
+    <color name="colorwhite_50">#CCffffff</color>
+    <color name="swithGray">#E5E6E7</color>
+
+    <color name="business_color">#ECF2FF</color>
+    <color name="my_business_color">#FFECEF</color>
+    <color name="my_business_color_dark">#FA9EAD</color>
+
+
+    <color name="colorwhitefix_30">#4DFFFFFF</color>
+    <color name="colorblackfix_50">#80000000</color>
+    <color name="colorblackfix_20">#E6000000</color>
+    <color name="colorblackfix">#000000</color>
+    <color name="blackColor">#000000</color>
+    <color name="newback">#484848</color>
+    <color name="redColor">#ff0008</color>
+    <color name="greenColor">#52D357</color>
+    <color name="greenColor2">#4E8A00</color>
+    <color name="blueColor">#007AFF</color>
+
+    <color name="likeblueColor">#CBF4FA</color>
+    <color name="trans">#33FFFCFC</color>
+
+
+    <color name="bluesh_black">#36394D</color>
+    <color name="p_color">#37A9FB</color>
+    <color name="k_color">#F72875</color>
+    <color name="placeholderAColor">#babec1</color>
+    <color name="placeholderBColor">#e9eef1</color>
+    <color name="white">#ffffff</color>
+    <color name="colorwhite_30">#4Dffffff</color>
+    <color name="black">#000000</color>
+    <color name="graycolor">#D3D3D3</color>
+    <color name="dgraycolor">#606060</color>
+    <color name="graycolor2">#C4C4C4</color>
+    <color name="shimmerLight">#F5F5F5</color>
+    <color name="graycolor_20">#33C5C4C4</color>
+    <color name="gainsboro">#DCDCDC</color>
+    <color name="lightgraycolor">#f2f2f2</color>
+    <color name="darkgray">#93959A</color>
+    <color name="darkgray_30">#4D5D5D5D</color>
+    <color name="dimgray">#696969</color>
+    <color name="lightblack">#5d5d5d</color>
+    <color name="delete_message_text">#b8b8b8</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="fifty_transparent_black">#802F2F2F</color>
+    <color name="lightGray">#CCCCCC</color>
+    <color name="lightgray">#F2F2F2</color>
+    <color name="colorwhite_80">#CCDCDCDC</color>
+    <color name="colorblack_50">#80000000</color>
+    <color name="colorblack_80">#CC000000</color>
+    <color name="colorblack_90">#FC36394D</color>
+
+    <!--    photo editor-->
+    <color name="pink_color_picker">#FF69B4</color>
+    <color name="blue_color_picker">#0066FF</color>
+    <color name="brown_color_picker">#AF593E</color>
+    <color name="green_color_picker">#01A368</color>
+    <color name="orange_color_picker">#FF861F</color>
+    <color name="red_color_picker">#ED0A3F</color>
+    <color name="red_orange_color_picker">#FF3F34</color>
+    <color name="sky_blue_color_picker">#76D7EA</color>
+    <color name="violet_color_picker">#8359A3</color>
+    <color name="yellow_color_picker">#FBE870</color>
+    <color name="yellow_green_color_picker">#C5E17A</color>
+
+
+    <color name="semi_transparent">#6DFFC107</color>
+    <color name="semi_transparent2">#46FFC107</color>
+    <color name="selected_card">#47C494</color>
+
+    <color name="primary_color_alpha">#66B7332F</color>
+    <color name="secondary_color">#12263A</color>
+
+    <color name="gray">#B3B0B0</color>
+    <color name="red_color">#a8304c</color>
+    <color name="blue_color">#1853b7</color>
+    <color name="yellow">#ffbc04</color>
+    <color name="light_grey">#E4E4E4</color>
+
+    <!--    common color-->
+    <color name="whisper_gray">#EFEFEF</color> <!-- almost white background color-->
+    <color name="emerald_green">#20B462</color>
+    <color name="green_bg">@color/emerald_green</color>
+    <color name="slate_gray">#6F6F6F</color> <!--unselected text color-->
+    <color name="unselected_text_color">@color/slate_gray</color> <!--unselected text color-->
+    <color name="text_color">#000000</color> <!--black text color-->
+    <color name="Gainsboro">#D9D9D9</color> <!--light gray background color-->
+    <color name="light_gray_bg">@color/Gainsboro</color>
+    <color name="vivid_red">#FF282E</color>
+    <color name="red_bg">@color/vivid_red</color>
+
+
+</resources>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activitesfragments.shoping.AddProducts.ChooseCategory">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:paddingHorizontal="@dimen/_10sdp"
+    android:paddingVertical="@dimen/_10sdp">
+    
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="@dimen/_32sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/ic_cross"
+        app:tint="@color/black"
+        android:scaleType="fitStart"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_a_category"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:includeFontPadding="false"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:id="@+id/imagesRecylerView"
+        android:layout_marginTop="@dimen/_10sdp"/>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tap_to_delete_or_replace_photo_drag_and_drop_to_reorder"
+        android:textColor="@color/dimgray"
+        android:layout_marginTop="@dimen/_5sdp"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        app:cardCornerRadius="@dimen/_6sdp"
+        app:cardElevation="0dp"
+        android:id="@+id/search_layout"
+        app:cardBackgroundColor="@color/graycolor_20">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:paddingStart="@dimen/_6sdp"
+            android:paddingEnd="@dimen/_6sdp">
+
+            <ImageButton
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:id="@+id/search"
+                android:padding="@dimen/_2sdp"
+                android:scaleType="fitCenter"
+                android:layout_centerVertical="true"
+                android:background="@color/transparent"
+                app:tint="@color/dimgray"
+                android:src="@drawable/ic_discovery_gray"/>
+
+            <EditText
+                android:id="@+id/searchEdit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/search"
+                android:background="@color/transparent"
+                android:hint="@string/search_for_category"
+                android:imeOptions="actionSearch"
+                android:inputType="textNoSuggestions"
+                android:paddingStart="@dimen/_6sdp"
+                android:paddingTop="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_2sdp"
+                android:paddingBottom="@dimen/_4sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/darkgray"
+                android:textSize="@dimen/_11sdp" />
+            
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recylerViewCategory"
+        android:layout_marginTop="@dimen/_5sdp"/>
+
+</LinearLayout>
+
+</layout>

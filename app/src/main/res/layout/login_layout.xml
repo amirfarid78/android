@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/dataLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:visibility="gone"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12sdp"
+            android:text="Please Log in or Sign up"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/infoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10sdp"
+            android:textAlignment="center"
+            android:text="And swipe up or down custom tailored videos, live-streams about foods"
+            android:layout_marginTop="5dp"/>
+        
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="201dp"
+            android:layout_height="35dp"
+            app:backgroundTint="@null"
+            android:text="Log in"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/d_round_colord_6"/>
+        <Button
+            android:id="@+id/btnSignup"
+            android:layout_width="201dp"
+            android:layout_height="35dp"
+            app:backgroundTint="@null"
+            android:text="sign up"
+            android:textColor="@color/appColor"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/d_round_colord_outline_6"/>
+    </LinearLayout>
+</LinearLayout>

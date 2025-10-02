@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:id="@+id/username_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        tools:context=".activitesfragments.accounts.CreateUsernameFragment">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true">
+
+            <!-- Toolbar -->
+            <FrameLayout
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:background="@drawable/d_bottom_gray_line">
+
+                <ImageButton
+                    android:id="@+id/goBack"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_gravity="start|center_vertical"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_back_btn"
+                    app:tint="@color/black" />
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/sign_up"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <!-- Main Content in ConstraintLayout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/main_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create_a_username"
+                    android:layout_marginTop="28dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:text="@string/username_desciption"
+                    android:textColor="@color/slate_gray"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintTop_toBottomOf="@id/title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <FrameLayout
+                    android:id="@+id/username_field_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_38sdp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/d_bottom_gray_line"
+                    app:layout_constraintTop_toBottomOf="@id/description"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <EditText
+                        android:id="@+id/username_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/enter_a_username"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/graycolor"
+                        android:textSize="14sp" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/username_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/at_least_4_characters"
+                    android:textColor="@color/slate_gray"
+                    android:textSize="10sp"
+                    app:layout_constraintTop_toBottomOf="@id/username_field_container"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/username_count_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0/30"
+                    android:textColor="@color/slate_gray"
+                    android:textSize="10sp"
+                    app:layout_constraintTop_toTopOf="@id/username_hint"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/error_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/username_is_taken"
+                    android:textColor="@color/vivid_red"
+                    android:textSize="10sp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/username_hint"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <FrameLayout
+                    android:id="@+id/referal_code_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_38sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:visibility="gone"
+                    android:background="@drawable/d_bottom_gray_line"
+                    app:layout_constraintTop_toBottomOf="@id/error_msg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <EditText
+                        android:id="@+id/referal_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/referal_code"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/graycolor"
+                        android:textSize="@dimen/_11sdp" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/errorMsgTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:textColor="@color/appColor"
+                    android:textSize="@dimen/_11sdp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/referal_code_container"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+<!--                <Button-->
+<!--                    android:id="@+id/btn_skip"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="@dimen/_38sdp"-->
+<!--                    android:layout_marginTop="28dp"-->
+<!--                    android:enabled="false"-->
+<!--                    android:text="@string/skip"-->
+<!--                    android:textColor="@color/whiteColor"-->
+<!--                    android:textSize="@dimen/_11sdp"-->
+<!--                    android:theme="@style/ButtonStyle"-->
+<!--                    com:layout_constraintStart_toStartOf="parent"-->
+<!--                    com:layout_constraintTop_toBottomOf="@id/errorMsgTxt"-->
+<!--                    com:layout_constraintWidth_percent=".47" />-->
+
+                <Button
+                    android:id="@+id/btn_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_38sdp"
+                    android:layout_marginTop="@dimen/_22sdp"
+                    android:enabled="false"
+                    android:text="@string/confirm"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="@dimen/_11sdp"
+                    android:theme="@style/ButtonStyle"
+                    app:layout_constraintWidth_percent=".47"
+                    app:layout_constraintTop_toBottomOf="@id/errorMsgTxt"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</layout>

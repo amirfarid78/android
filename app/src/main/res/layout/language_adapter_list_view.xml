@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:background="@drawable/d_bottom_gray_line"
+        android:paddingStart="@dimen/_20sdp"
+        android:paddingEnd="@dimen/_20sdp">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toStartOf="@+id/ivTick"
+            android:gravity="center_vertical|start"
+            android:includeFontPadding="false"
+            android:layoutDirection="ltr"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="normal" />
+
+
+        <ImageView
+            android:id="@+id/ivTick"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_tick"
+            android:visibility="gone"
+            app:tint="@color/appColor" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

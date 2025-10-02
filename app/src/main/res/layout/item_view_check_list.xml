@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:id="@+id/tabSelection"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_toStartOf="@+id/ivSelection"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:gravity="start|center_vertical"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:textColor="@color/black"
+            android:text="Appetizer"
+            android:textStyle="bold"
+            android:textSize="@dimen/_11sdp" />
+
+
+        <ImageView
+            android:id="@+id/ivSelection"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:src="@drawable/checkbox_checked"
+            android:padding="@dimen/_4sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+</layout>

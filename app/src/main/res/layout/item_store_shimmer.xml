@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shimmer_duration="@integer/shimmer_duration"
+        app:shimmer_repeat_delay="@integer/shimmer_delay"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_26sdp"
+                android:layout_weight="1"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="6dp"
+                android:elevation="1dp"
+                android:background="@drawable/round_btn_10"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnDelivery"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/whiteColor"
+                    android:background="@drawable/d_round_colord_8_"
+                    app:backgroundTint="@null"
+                    android:textAllCaps="false"
+                    />
+
+                <Button
+                    android:id="@+id/btnpickup"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_toRightOf="@id/btnDelivery"
+                    app:backgroundTint="@null"
+                    android:textColor="@color/blackColor"
+                    android:background="@color/transparent"
+                    android:textAllCaps="false"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_marginTop="-19dp"
+                android:orientation="horizontal"
+                android:background="@drawable/round_border_pick">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="15dp"
+                        android:background="@color/gainsboro"/>
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/gainsboro"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/lightgraycolor"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="15dp"
+                        android:background="@color/gainsboro"/>
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/gainsboro"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</RelativeLayout>

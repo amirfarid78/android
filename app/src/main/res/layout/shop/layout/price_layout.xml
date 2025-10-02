@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/_10dp"
+        android:paddingBottom="@dimen/_10dp"
+        android:paddingStart="@dimen/_14sdp"
+        android:paddingEnd="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/d_round_gray_background_2">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="S$"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginEnd="10dp"/>
+        <EditText
+            android:id="@+id/price_edt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@null"
+            android:background="@color/transparent"
+            android:hint="@string/price_for_your_listing"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:inputType="numberDecimal"/>
+    </LinearLayout>
+
+</LinearLayout>

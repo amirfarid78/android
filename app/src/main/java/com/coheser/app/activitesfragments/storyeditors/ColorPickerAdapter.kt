@@ -1,0 +1,84 @@
+package com.coheser.app.activitesfragments.storyeditors
+
+import android.content.Context
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.ImageView
+import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.RecyclerView
+import com.coheser.app.R
+
+class ColorPickerAdapter internal constructor(
+    private var context: Context,
+    colorPickerColors: IntArray
+) : RecyclerView.Adapter<ColorPickerAdapter.ViewHolder>() {
+    private var inflater: LayoutInflater
+    private val colorPickerColors: IntArray
+    private var onColorPickerClickListener: OnColorPickerClickListener? = null
+
+    internal constructor(context: Context) : this(context, getDefaultColors(context)) {
+        this.context = context
+        inflater = LayoutInflater.from(context)
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val view = inflater.inflate(R.layout.color_picker_item_list, parent, false)
+        return ViewHolder(view)
+    }
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.colorPickerView.setColorFilter(
+            colorPickerColors[position],
+            android.graphics.PorterDuff.Mode.SRC_IN
+        )
+    }
+
+    override fun getItemCount(): Int {
+        return colorPickerColors.size
+    }
+
+    fun setOnColorPickerClickListener(onColorPickerClickListener: OnColorPickerClickListener?) {
+        this.onColorPickerClickListener = onColorPickerClickListener
+    }
+
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        var colorPickerView: ImageView = itemView.findViewById(R.id.color_picker_view)
+
+        init {
+            itemView.setOnClickListener {
+                if (onColorPickerClickListener != null) onColorPickerClickListener!!.onColorPickerClickListener(
+                    colorPickerColors[adapterPosition]
+                )
+            }
+        }
+    }
+
+    interface OnColorPickerClickListener {
+        fun onColorPickerClickListener(colorCode: Int)
+    }
+
+    companion object {
+        fun getDefaultColors(context: Context): IntArray {
+            return IntArray(12).apply {
+                this[0] = ContextCompat.getColor(context, R.color.white)
+                this[1] = ContextCompat.getColor(context, R.color.black)
+                this[2] = ContextCompat.getColor(context, R.color.blue_color_picker)
+                this[3] = ContextCompat.getColor(context, R.color.brown_color_picker)
+                this[4] = ContextCompat.getColor(context, R.color.green_color_picker)
+                this[5] = ContextCompat.getColor(context, R.color.orange_color_picker)
+                this[6] = ContextCompat.getColor(context, R.color.red_color_picker)
+                this[7] = ContextCompat.getColor(context, R.color.red_orange_color_picker)
+                this[8] = ContextCompat.getColor(context, R.color.sky_blue_color_picker)
+                this[9] = ContextCompat.getColor(context, R.color.violet_color_picker)
+                this[10] = ContextCompat.getColor(context, R.color.yellow_color_picker)
+                this[11] = ContextCompat.getColor(context, R.color.yellow_green_color_picker)
+            }
+        }
+    }
+
+    init {
+        inflater = LayoutInflater.from(context)
+        this.colorPickerColors = colorPickerColors
+    }
+}

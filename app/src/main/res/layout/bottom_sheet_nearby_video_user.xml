@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:id="@+id/mainBottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/d_round_top_corners_white"
+        android:elevation="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        app:behavior_hideable="false"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <View
+               android:layout_centerHorizontal="true"
+               android:layout_centerVertical="true"
+               android:layout_width="@dimen/_40sdp"
+               android:layout_height="@dimen/_6sdp"
+               android:layout_gravity="center"
+               android:layout_marginVertical="@dimen/_12sdp"
+               android:background="@drawable/round_btn_gray"/>
+
+       </RelativeLayout>
+
+
+
+        <TextView
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:id="@+id/locationNameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/locationTxt"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold" />
+
+
+        <include
+            android:id="@+id/includedLayout"
+            layout="@layout/layout_for_map_taged_videos_bottom_tabs" />
+
+    </LinearLayout>
+</layout>

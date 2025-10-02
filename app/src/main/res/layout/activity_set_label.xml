@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".activitesfragments.location.SetLabelActivity">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/d_bottom_gray_line"
+        android:paddingStart="@dimen/_12sdp"
+        android:paddingEnd="@dimen/_12sdp">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:paddingVertical="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_40sdp"
+            android:scaleType="fitStart"
+            android:src="@drawable/ic_back_btn"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/set_label"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/toolbar"
+        android:padding="@dimen/_10sdp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/address_label"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_10dp"
+            android:textSize="@dimen/_12sdp" />
+
+        <EditText
+            android:id="@+id/labelEdt"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:backgroundTint="@null"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:hint="@string/e_g_home_work_gym"
+            android:paddingStart="@dimen/_11sdp"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/blackColor"
+            android:background="@drawable/round_graybg20" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/appColor_15"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            android:layout_marginTop="15dp"
+            android:padding="@dimen/_11sdp"
+            android:text="@string/your_labeled_addresses_are_used_to_personalized_your_experience_across_liver_only_you_can_see_the_label_and_you_can_unset_it_at_anytime"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/saveAddress"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:backgroundTint="@null"
+        android:background="@drawable/btn_color_round_order"
+        android:text="@string/save_address"
+        android:textColor="@color/whiteColor"
+        android:textSize="@dimen/_14sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_10sdp" />
+
+</RelativeLayout>

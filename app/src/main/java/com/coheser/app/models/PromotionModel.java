@@ -1,0 +1,231 @@
+package com.coheser.app.models;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class PromotionModel implements Parcelable {
+    public static final Creator<PromotionModel> CREATOR = new Creator<PromotionModel>() {
+        @Override
+        public PromotionModel createFromParcel(Parcel in) {
+            return new PromotionModel(in);
+        }
+
+        @Override
+        public PromotionModel[] newArray(int size) {
+            return new PromotionModel[size];
+        }
+    };
+    private String id;
+    private String user_id;
+    private String website_url;
+    private String start_datetime;
+    private String end_datetime;
+    private String coin;
+    private String active;
+    private String destination;
+    private String action_button;
+    private String destination_tap;
+    private String followers;
+    private String reach;
+    private String total_reach;
+    private String clicks;
+    private String audience_id;
+    private String payment_card_id;
+    private String created;
+    private String video_id;
+
+    public PromotionModel() {
+    }
+
+    protected PromotionModel(Parcel in) {
+        id = in.readString();
+        user_id = in.readString();
+        website_url = in.readString();
+        start_datetime = in.readString();
+        end_datetime = in.readString();
+        coin = in.readString();
+        active = in.readString();
+        destination = in.readString();
+        action_button = in.readString();
+        destination_tap = in.readString();
+        followers = in.readString();
+        reach = in.readString();
+        total_reach = in.readString();
+        clicks = in.readString();
+        audience_id = in.readString();
+        payment_card_id = in.readString();
+        created = in.readString();
+        video_id = in.readString();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(id);
+        dest.writeString(user_id);
+        dest.writeString(website_url);
+        dest.writeString(start_datetime);
+        dest.writeString(end_datetime);
+        dest.writeString(coin);
+        dest.writeString(active);
+        dest.writeString(destination);
+        dest.writeString(action_button);
+        dest.writeString(destination_tap);
+        dest.writeString(followers);
+        dest.writeString(reach);
+        dest.writeString(total_reach);
+        dest.writeString(clicks);
+        dest.writeString(audience_id);
+        dest.writeString(payment_card_id);
+        dest.writeString(created);
+        dest.writeString(video_id);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(String user_id) {
+        this.user_id = user_id;
+    }
+
+    public String getWebsite_url() {
+        return website_url;
+    }
+
+    public void setWebsite_url(String website_url) {
+        this.website_url = website_url;
+    }
+
+    public String getStart_datetime() {
+        return start_datetime;
+    }
+
+    public void setStart_datetime(String start_datetime) {
+        this.start_datetime = start_datetime;
+    }
+
+    public String getEnd_datetime() {
+        return end_datetime;
+    }
+
+    public void setEnd_datetime(String end_datetime) {
+        this.end_datetime = end_datetime;
+    }
+
+    public String getCoin() {
+        return coin;
+    }
+
+    public void setCoin(String coin) {
+        this.coin = coin;
+    }
+
+    public String getActive() {
+        return active;
+    }
+
+    public void setActive(String active) {
+        this.active = active;
+    }
+
+    public String getDestination() {
+        return destination;
+    }
+
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
+
+    public String getAction_button() {
+        return action_button;
+    }
+
+    public void setAction_button(String action_button) {
+        this.action_button = action_button;
+    }
+
+    public String getDestination_tap() {
+        return destination_tap;
+    }
+
+    public void setDestination_tap(String destination_tap) {
+        this.destination_tap = destination_tap;
+    }
+
+    public String getFollowers() {
+        return followers;
+    }
+
+    public void setFollowers(String followers) {
+        this.followers = followers;
+    }
+
+    public String getReach() {
+        return reach;
+    }
+
+    public void setReach(String reach) {
+        this.reach = reach;
+    }
+
+    public String getTotal_reach() {
+        return total_reach;
+    }
+
+    public void setTotal_reach(String total_reach) {
+        this.total_reach = total_reach;
+    }
+
+    public String getClicks() {
+        return clicks;
+    }
+
+    public void setClicks(String clicks) {
+        this.clicks = clicks;
+    }
+
+    public String getAudience_id() {
+        return audience_id;
+    }
+
+    public void setAudience_id(String audience_id) {
+        this.audience_id = audience_id;
+    }
+
+    public String getPayment_card_id() {
+        return payment_card_id;
+    }
+
+    public void setPayment_card_id(String payment_card_id) {
+        this.payment_card_id = payment_card_id;
+    }
+
+    public String getCreated() {
+        return created;
+    }
+
+    public void setCreated(String created) {
+        this.created = created;
+    }
+
+    public String getVideo_id() {
+        return video_id;
+    }
+
+    public void setVideo_id(String video_id) {
+        this.video_id = video_id;
+    }
+}

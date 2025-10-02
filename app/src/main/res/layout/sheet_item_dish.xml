@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:background="@color/white"
+            android:layout_gravity="start|center_vertical"
+            android:gravity="start|center_vertical"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:textColor="@color/black"
+            android:text="Appetizer"
+            android:textStyle="bold"
+            android:textSize="@dimen/_11sdp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/swithGray"
+            android:alpha="0.5"/>
+    </FrameLayout>
+</layout>
