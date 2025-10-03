@@ -110,7 +110,7 @@ public class VideoPromoteStepsActivity extends AppCompatLocaleActivity {
     }
 
     private void registerFragmentWithPager() {
-        adapter.addFrag(VideoPromoteSelectGoalFragment.newInstance());
+        adapter.addFrag(VideoPromoteSelectGoalFragment.newInstance(), "Select Goal");
     }
 
     @Override

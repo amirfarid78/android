@@ -29,7 +29,7 @@ abstract class RtcBaseActivity : BaseActivity(), EventHandler {
         )
         configuration.advanceOptions = AdvanceOptions(
             VideoEncoderConfiguration.ENCODING_PREFERENCE.PREFER_AUTO,
-            VideoEncoderConfiguration.COMPRESSION_PREFERENCE.PREFER_QUALITY,false)
+            VideoEncoderConfiguration.COMPRESSION_PREFERENCE.PREFER_QUALITY)
 
         val cameraCapturerConfiguration =
             CameraCapturerConfiguration(CameraCapturerConfiguration.CAMERA_DIRECTION.CAMERA_FRONT)

@@ -116,10 +116,10 @@ class AddAllDetailsA : AppCompatActivity() {
             override fun onResponce(bundle: Bundle?) {
                 addProductModel!!.condition=bundle!!.getString("condition","")
             }
-        }))
-        adapter!!.addFrag(ItemDetailF.newInstance())
-        adapter!!.addFrag(DealMethodF.newInstance())
-        adapter!!.addFrag(PriceF.newInstance())
+        }), getString(R.string.condition))
+        adapter!!.addFrag(ItemDetailF.newInstance(), getString(R.string.item_details))
+        adapter!!.addFrag(DealMethodF.newInstance(), getString(R.string.deal_method))
+        adapter!!.addFrag(PriceF.newInstance(), getString(R.string.price))
     }
 
     override fun onBackPressed() {

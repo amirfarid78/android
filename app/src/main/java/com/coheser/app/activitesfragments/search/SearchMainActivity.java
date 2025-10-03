@@ -164,10 +164,10 @@ public class SearchMainActivity extends AppCompatLocaleActivity implements View.
 
     private void registerFragmentWithPager() {
 
-        adapter.addFrag(SearchUserFragment.newInstance("user"));
-        adapter.addFrag(SearchVideoFragment.newInstance("video"));
-        adapter.addFrag(SearchSoundFragment.newInstance("sound"));
-        adapter.addFrag(SearchHashTagsFragment.newInstance("hashtag"));
+        adapter.addFrag(SearchUserFragment.newInstance("user"), context.getString(R.string.users));
+        adapter.addFrag(SearchVideoFragment.newInstance("video"), context.getString(R.string.videos));
+        adapter.addFrag(SearchSoundFragment.newInstance("sound"), context.getString(R.string.sounds));
+        adapter.addFrag(SearchHashTagsFragment.newInstance("hashtag"), context.getString(R.string.hashtags_));
     }
 
     public void addSearchKey(String search_key) {

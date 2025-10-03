@@ -88,8 +88,8 @@ public class SoundListMainActivity extends AppCompatLocaleActivity implements Vi
     }
 
     private void registerFragmentWithPager() {
-        adapter.addFrag(DiscoverSoundListFragment.newInstance());
-        adapter.addFrag(FavouriteSoundFragment.newInstance());
+        adapter.addFrag(DiscoverSoundListFragment.newInstance(), context.getString(R.string.discover));
+        adapter.addFrag(FavouriteSoundFragment.newInstance(), context.getString(R.string.my_fav));
     }
 
 

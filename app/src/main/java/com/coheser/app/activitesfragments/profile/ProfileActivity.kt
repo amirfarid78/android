@@ -540,11 +540,11 @@ class ProfileActivity : AppCompatLocaleActivity() {
 
     private fun registerFragmentWithPager() {
         fragmentUserVides = UserVideoFragment.newInstance(false, viewModel.userId.toString(), viewModel.userName.toString(), userDetailModel?.block.toString())
-        adapter!!.addFrag(fragmentUserVides)
+        adapter!!.addFrag(fragmentUserVides, getString(R.string.my_videos))
 
         fragmentLikesVides = LikedVideoFragment.newInstance(false, viewModel.userId.toString(),
             viewModel.userName.toString(), isLikeVideoShow,  userDetailModel?.block.toString())
-        adapter!!.addFrag(fragmentLikesVides)
+        adapter!!.addFrag(fragmentLikesVides, getString(R.string.liked_videos))
     }
 
     private fun setUpSuggestionRecyclerview() {

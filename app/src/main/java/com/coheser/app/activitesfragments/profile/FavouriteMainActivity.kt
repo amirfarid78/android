@@ -70,9 +70,9 @@ class FavouriteMainActivity : AppCompatLocaleActivity() {
     }
 
     private fun registerFragmentWithPager() {
-        adapter!!.addFrag(newInstance(getSharedPreference(this).getString(Variables.U_ID, ""), "0"))
-        adapter!!.addFrag(FavouriteSoundFragment.newInstance())
-        adapter!!.addFrag(SearchHashTagsFragment.newInstance("favourite"))
+        adapter!!.addFrag(newInstance(getSharedPreference(this).getString(Variables.U_ID, ""), "0"), getString(R.string.videos))
+        adapter!!.addFrag(FavouriteSoundFragment.newInstance(), getString(R.string.sounds))
+        adapter!!.addFrag(SearchHashTagsFragment.newInstance("favourite"), getString(R.string.hashtag))
     }
 
 

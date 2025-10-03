@@ -108,7 +108,7 @@ class FollowsMainTabActivity : AppCompatLocaleActivity() {
             } else {
                 updateTab!!.setText(getString(R.string.following) + " " + followingCount)
             }
-        })
+        }, getString(R.string.following))
         adapter!!.addFrag(FollowerUserFragment.newInstance(userId, false) { bundle ->
             val updateTab =  binding.tabs!!.getTabAt(0)
             if (bundle.getBoolean("isShow")) {
@@ -122,8 +122,8 @@ class FollowsMainTabActivity : AppCompatLocaleActivity() {
             } else {
                 updateTab!!.setText(getString(R.string.followers) + " " + followerCount)
             }
-        })
-        adapter!!.addFrag(newInstance(userId!!, false) { isActivityCallback = true })
+        }, getString(R.string.followers))
+        adapter!!.addFrag(newInstance(userId!!, false) { isActivityCallback = true }, getString(R.string.suggested))
     }
 
     override fun onBackPressed() {

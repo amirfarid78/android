@@ -47,9 +47,9 @@ public class AnalyticsActivity extends AppCompatLocaleActivity {
         pager.setOffscreenPageLimit(2);
         pager.setUserInputEnabled(false);
 
-        adapter.addFrag(OverviewFragment.newInstance());
+        adapter.addFrag(OverviewFragment.newInstance(), getString(R.string.overview));
         //  adapter.addFrag(ContentAnalyticF.newInstance());
-        adapter.addFrag(FollowersAnalyticsFragment.newInstance());
+        adapter.addFrag(FollowersAnalyticsFragment.newInstance(), getString(R.string.following));
 
         pager.setAdapter(adapter);
         addTabs();

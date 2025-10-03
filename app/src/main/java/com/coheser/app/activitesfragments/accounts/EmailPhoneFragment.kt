@@ -106,7 +106,7 @@ class EmailPhoneFragment : Fragment(){
     }
 
     private fun registerFragmentWithPager() {
-        adapter?.addFrag(PhoneFragment.newInstance(fromWhere,userRegisterModel))
-        adapter?.addFrag(EmailFragment.newInstance( fromWhere,userRegisterModel))
+        adapter?.addFrag(PhoneFragment.newInstance(fromWhere,userRegisterModel), binding.root.context.getString(R.string.phone))
+        adapter?.addFrag(EmailFragment.newInstance( fromWhere,userRegisterModel), binding.root.context.getString(R.string.email))
     }
 }
